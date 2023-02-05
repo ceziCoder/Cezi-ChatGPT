@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Arial Narrow', sans-serif;
+scroll-behavior: smooth;
+
+
+}
+
+
+@media only screen and (max-width: 767px) {
+  .gradient-03 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    background: #b617f5;
+    filter: blur(175px);
+  }
+
+  .gradient-04 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    right: 0px;
+    background: #7afbea;
+    filter: blur(190px);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .gradient-01 {
+    position: absolute;
+    width: 200px;
+    height: 238px;
+    top: 0;
+    background: #b617f5;
+    filter: blur(175px);
+  }
+
+  .gradient-02 {
+    position: absolute;
+    width: 200px;
+    height: 238px;
+    top: 0;
+    right: 0px;
+    background: #7afbea;
+    filter: blur(190px);
+  }
+}
+
