@@ -5,12 +5,12 @@ import axios, { Axios } from "axios"
 
 export const fetchResponse = async (chat: any) => {
 	try {
-		const response = await fetch('http://localhost:3000/', {
+		const response = await fetch('https://cezi-chat-2wp0flnsp-cezicoder.vercel.app/', {
 			method: 'POST',
 			headers: { 'Content-type': 'application/json' },
 
 			body: JSON.stringify({
-				message: chat.map((message:any) => message.message).join('\n'),
+				message: chat.map((message: any) => message.message).join('\n'),
 			}),
 		})
       const data = await response.json()
