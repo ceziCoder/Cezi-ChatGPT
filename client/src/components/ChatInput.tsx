@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
 import { BiSend } from 'react-icons/bi'
 import { text } from 'stream/consumers'
+import { DotLoader } from 'react-spinners'
+
+
+
+
 
 export const ChatInput = ({ sendMessage, loading }:any) => {
 
@@ -20,10 +25,12 @@ export const ChatInput = ({ sendMessage, loading }:any) => {
 
   }
 
+  //  img className='w-8 m-auto' src='./loader.gif'
+
   return (
     <div className='w-full bg-black/30 max-h-40 rounded-lg py-4 px-4 overflow-auto relative'>
 
-    {loading ? (<img className='w-8 m-auto' src='./loader.gif'/>) : (
+      {loading ? (<DotLoader size={50} color={'#e641ec'} className=' m-auto  w-8 ' />) : (
     <>
       <textarea
       onKeyDown={(e) => {

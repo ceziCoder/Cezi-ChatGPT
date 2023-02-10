@@ -54,5 +54,18 @@ scroll-behavior: smooth;
     background: #7afbea;
     filter: blur(190px);
   }
+   
+  .bg-clip-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #ac47e2, #abf7ed);
+  -webkit-background-image: linear-gradient(to right, #bb41ec, #a3f5e3);
+  background-size: cover;
+   
 }
 
+
+
+
+}
