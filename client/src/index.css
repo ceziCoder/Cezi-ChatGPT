@@ -20,7 +20,7 @@ scroll-behavior: smooth;
     width: 100px;
     height: 100px;
     top: 0;
-    background: #b617f5;
+    background: #bca2d1;
     filter: blur(175px);
   }
 
@@ -42,7 +42,7 @@ scroll-behavior: smooth;
     height: 238px;
     top: 0;
     background: #b617f5;
-    filter: blur(175px);
+    filter: blur(135px);
   }
 
   .gradient-02 {
@@ -52,7 +52,7 @@ scroll-behavior: smooth;
     top: 0;
     right: 0px;
     background: #7afbea;
-    filter: blur(190px);
+    filter: blur(140px);
   }
    
   .bg-clip-text {

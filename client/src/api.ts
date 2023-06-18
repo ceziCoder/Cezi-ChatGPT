@@ -5,7 +5,7 @@
 
 export const fetchResponse = async (chat: any) => {
 	try {
-		const response = await fetch('https://cezi-server-gpt.vercel.app', {
+		const response = await fetch('cezi-server-gpt.vercel.app', {
 			method: 'POST',
 			headers: { 'Content-type': 'application/json' },
 

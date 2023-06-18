@@ -20,15 +20,7 @@ export const ChatBody = ({ chat }: any) => {
 
     }, [parent])
 
-    // scroll to bottom
-  /*  useEffect(() => {
-
-        bottomRef.current?.scrollIntoView({ behavior: 'smooth' })
-
-    }, [chat])  
-
-    */
-
+ 
 
 
 

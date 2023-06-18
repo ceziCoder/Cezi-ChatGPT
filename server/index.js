@@ -1,30 +1,32 @@
 import express from 'express'
 import cors from 'cors'
 import bodyParser from 'body-parser'
-import env from 'dotenv'
+import dotenv from 'dotenv'
 import { Configuration, OpenAIApi } from 'openai'
 
 // server
 const app = express()
+app.use(express.json({ limit: '20mb' }))
+app.use(express.urlencoded({ limit: '20mb', extended: true }))
+dotenv.config()
 
-env.config()
+app.use(cors({
+    origin: 'cezi-chat-gpt.vercel.app' }))
 
-app.use(cors({origin: '*'}))
-app.use(bodyParser.json())
 
 
 
 const configuration = new Configuration({
-    organization: "org-4ku6UgPDwckRKe8sBZk7VcOo",
+    organization: process.env.ORG,
     apiKey: process.env.API_KEY
 
 
 })
 
 const openai = new OpenAIApi(configuration)
+const port = process.env.PORT
 
-
-app.listen("3000", () => console.log('listening on port 3000'))
+app.listen(port, () => console.log('listening on port 3000'))
 
 app.get('/', (req, res) => {
     res.send('hello')
@@ -36,23 +38,24 @@ app.post('/', async (req, res) => {
     const { message } = req.body
 
     try {
-        
+
         const response = await openai.createCompletion({
             model: "text-davinci-003",
             prompt: `${message}`,
             max_tokens: 3000,
-            temperature: .5,
-            frequency_penalty: 0.5,
-            presence_penalty: 0,
+            temperature: 0.2,
+            frequency_penalty: 0.8,
+            presence_penalty: 0.2
         })
-        res.json({message: response.data.choices[0].text})
+        res.json({ message: response.data.choices[0].text })
+        console.log({message})
 
-    
-    } catch(e) {
+    } catch (e) {
 
-        console.log(e)
+       
         res.send(e).status(400)
-    
+        console.log(e)
+
     }
 
 })

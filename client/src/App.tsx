@@ -35,16 +35,17 @@ const App = () => {
 		
 
 	return (
-		<div className='bg-gray-800 h-screen relative py-2 px-12 sm:px-16   text-white overflow-hidden flex flex-col align-middle '>
+		<div className='bg-gradient-to-r from-[#0a343a] to-[#29776d] h-screen relative py-2 px-12 sm:px-16   text-white overflow-hidden flex flex-col align-middle '>
 			<div className='gradient-01 gradient-03 z-0 absolute'></div>
 			<div className='gradient-02 gradient-04  z-0 absolute'></div>
-			<FaRobot className='' style={{ color: '#e641ec' }} size={39} />
+			<FaRobot className='absolute top-[2rem] left-[2rem] text-white' style={{ color: '#e641ec' }} size={39} />
                     {/* header */}
-			<div className=' font-bold text-2xl text-center   w-40 self-center '>
-				
-				<p className=' bg-clip-text text-transparent bg-gradient-to-r from-[#e641ec] to-[#8ffaec] '>Cezi Chat GPT </p>
-				
+			<div className=' font-bold text-2xl text-center    w-40 self-center '>
+				<p className='self-start bg-clip-text text-transparent bg-gradient-to-r from-[#41d8ec] to-[#8ffaec] '>Cezi Chat GPT  </p>
 			</div>
+				<p className='self-center text-xs bg-clip-text text-transparent bg-gradient-to-r from-[#e641ec] to-[#8ffaec] '> model: "text-davinci-003" </p>
+				
+			
                    {/* body */}
 			<div className='h-full overflow-auto w-full max-w-4xl min-w-[20rem] py-8 px-4 self-center scrollbar-thumb-slate-400 scrollbar-thin scrollbar-track-gray-transparent scrollbar-thumb-rounded-md'>
 				<ChatBody chat={chat} />
