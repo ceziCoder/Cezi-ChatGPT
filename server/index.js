@@ -11,7 +11,7 @@ app.use(express.urlencoded({ limit: '20mb', extended: true }))
 dotenv.config()
 
 app.use(cors({
-    origin: 'cezi-chat-gpt.vercel.app' }))
+    origin: 'https://cezi-chat-gpt.vercel.app/' }))
 
 
 
