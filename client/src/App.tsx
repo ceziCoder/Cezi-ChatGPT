@@ -30,7 +30,17 @@ const App = () => {
 		mutation.mutate()
 	}
 
-
+    useEffect(() => {
+		const handleUnSupportedRoute = () => {
+			 window.location.href = '/'
+		}
+		
+		
+		window.addEventListener('popstate', handleUnSupportedRoute)
+		return () => {
+			window.removeEventListener('popstate', handleUnSupportedRoute)
+		}
+	},[])
 	
 		
 
