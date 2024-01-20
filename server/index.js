@@ -40,7 +40,7 @@ app.post("/", async (req, res) => {
       frequency_penalty: 0.8,
      presence_penalty: 0.2,
     });
-    res.json({ message: response.choices[0].text });
+    res.json({ message: response.choices[0].message.content });
     console.log({ message });
   } catch (e) {
     console.error("Błąd zapytania do OpenAI:", e);
