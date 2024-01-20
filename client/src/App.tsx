@@ -57,8 +57,8 @@ const App = () => {
     <div className=" bg-gradient-to-r from-[#3a2d52] to-[#2b8a6f] h-screen relative py-2 px-12 sm:px-16   overflow-hidden flex flex-col align-middle ">
       <div className="gradient-01 gradient-03 z-0 absolute"></div>
       <div className="gradient-02 gradient-04  z-0 absolute"></div>
-      <div className="absolute top-0 left-2 ">
-        <Lottie options={defaultOptions} height={200} width={200}></Lottie>
+      <div className="absolute top-0 left-0 ml-1 bg-transparent w-[100px] h-[100px] md:h-[200px] md:w-[200px]">
+        <Lottie options={defaultOptions} ></Lottie>
       </div>
       {/* header */}
       <div className=" font-bold text-2xl text-center    w-40 self-center ">
