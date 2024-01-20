@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Configuration, OpenAIApi } from 'openai'
+
 import { ChatBody } from './components/ChatBody'
 import { ChatInput } from './components/ChatInput'
 import { useMutation } from '@tanstack/react-query'
@@ -18,12 +18,19 @@ const App = () => {
 
 	const mutation = useMutation({
 		mutationFn: () => {
-			return fetchResponse(chat)
+		  return fetchResponse(chat);
 		},
+	  
+		onSuccess: (data) => {
+		  if (data && data.message) {
+			setChat((prev: any) => [
+			  ...prev,
+			  { sender: 'ai', message: data.message.replace(/^\n\n/, '') },
+			]);
+		  }
+		},
+	  });
 
-		onSuccess: (data) =>
-			setChat((prev: any) => [...prev, { sender: 'ai', message: data.message.replace(/^\n\n/, "") }]),
-	})
 
 	const sendMessage = async (message: any) => {
 		await Promise.resolve(setChat((prev: any) => [...prev, message]))
@@ -53,7 +60,7 @@ const App = () => {
 			<div className=' font-bold text-2xl text-center    w-40 self-center '>
 				<p className='self-start bg-clip-text text-transparent bg-gradient-to-r from-[#41d8ec] to-[#8ffaec] '>Cezi Chat GPT  </p>
 			</div>
-				<p className='self-center text-xs bg-clip-text text-transparent bg-gradient-to-r from-[#e641ec] to-[#8ffaec] '> model: "text-davinci-003" </p>
+				<p className='self-center text-xs bg-clip-text text-transparent bg-gradient-to-r from-[#e641ec] to-[#8ffaec] '> gpt-3.5-turbo" </p>
 				
 			
                    {/* body */}
