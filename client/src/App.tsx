@@ -68,7 +68,7 @@ const App = () => {
       </div>
       <p className="self-center text-xs bg-clip-text text-transparent bg-gradient-to-r from-[#eddcee] to-[#379789] ">
         {" "}
-        gpt-3.5-turbo"{" "}
+        gpt-3.5-turbo{" "}
       </p>
 
       {/* body */}
