@@ -14,14 +14,15 @@ scroll-behavior: smooth;
 }
 
 
+
 @media only screen and (max-width: 767px) {
   .gradient-03 {
     position: absolute;
     width: 100px;
     height: 100px;
     top: 0;
-    background: #bca2d1;
-    filter: blur(175px);
+    background: #af72e0;
+    filter: blur(150px);
   }
 
   .gradient-04 {
@@ -30,7 +31,7 @@ scroll-behavior: smooth;
     height: 100px;
     top: 0;
     right: 0px;
-    background: #7afbea;
+    background: #89d1c9;
     filter: blur(190px);
   }
 }
@@ -41,8 +42,8 @@ scroll-behavior: smooth;
     width: 200px;
     height: 238px;
     top: 0;
-    background: #b617f5;
-    filter: blur(135px);
+    background: #d076f3;
+    filter: blur(185px);
   }
 
   .gradient-02 {
@@ -51,7 +52,7 @@ scroll-behavior: smooth;
     height: 238px;
     top: 0;
     right: 0px;
-    background: #7afbea;
+    background: #2b9789;
     filter: blur(140px);
   }
    
@@ -59,8 +60,8 @@ scroll-behavior: smooth;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  background-image: linear-gradient(to right, #ac47e2, #abf7ed);
-  -webkit-background-image: linear-gradient(to right, #bb41ec, #a3f5e3);
+  background-image: linear-gradient(to right, #b446f0, #7aebdc);
+  -webkit-background-image: linear-gradient(to right, #ba4be6, #a3f5e3);
   background-size: cover;
    
 }

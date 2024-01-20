@@ -8,10 +8,15 @@ import './index.css'
 import { FaRobot } from 'react-icons/fa'
 import Typist  from 'react-typist'
 
+
+
+
+
+
 const App = () => {
 
 
-	
+
 
 	
 	const [chat, setChat] = useState<any>([])
@@ -52,15 +57,16 @@ const App = () => {
 		
 
 	return (
-		<div className='bg-gradient-to-r from-[#0a343a] to-[#29776d] h-screen relative py-2 px-12 sm:px-16   text-white overflow-hidden flex flex-col align-middle '>
+		
+		<div className=' bg-gradient-to-r from-[#3a2d52] to-[#2b8a6f] h-screen relative py-2 px-12 sm:px-16   overflow-hidden flex flex-col align-middle '>
 			<div className='gradient-01 gradient-03 z-0 absolute'></div>
 			<div className='gradient-02 gradient-04  z-0 absolute'></div>
-			<FaRobot className='absolute top-[2rem] left-[2rem] text-white' style={{ color: '#e641ec' }} size={39} />
+			
                     {/* header */}
 			<div className=' font-bold text-2xl text-center    w-40 self-center '>
-				<p className='self-start bg-clip-text text-transparent bg-gradient-to-r from-[#41d8ec] to-[#8ffaec] '>Cezi Chat GPT  </p>
+				<p className='self-start bg-clip-text  bg-gradient-to-r from-[#7c64b9] to-[#60c9bc] '>Cezi Chat GPT  </p>
 			</div>
-				<p className='self-center text-xs bg-clip-text text-transparent bg-gradient-to-r from-[#e641ec] to-[#8ffaec] '> gpt-3.5-turbo" </p>
+				<p className='self-center text-xs bg-clip-text text-transparent bg-gradient-to-r from-[#eddcee] to-[#379789] '> gpt-3.5-turbo" </p>
 				
 			
                    {/* body */}
@@ -71,7 +77,9 @@ const App = () => {
 			<div className='w-full max-w-4xl min-w-[20rem] self-center  '>
 				<ChatInput sendMessage={sendMessage} loading={mutation.isLoading} />
 			</div>
-		</div>
+			</div>
+		
+			
 	)
 }
 
